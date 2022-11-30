@@ -1,12 +1,11 @@
 import React from 'react'
-import {SafeAreaView} from 'react-native'
-import ThisIsText from './src/componentes/ThisIsText'
+import DetalhesPropriedades from './src/componentes/detalhesPropriedades'
 
 export default () => {
   return (
-    <SafeAreaView>
-      {/* Essa safeAreaView é somente para adicionarmos componentes */}
-      <ThisIsText/>
-    </SafeAreaView>
+    /* Coloque seus componentes abaixo...*/
+    <>
+      <DetalhesPropriedades numero={5} />
+    </>
   )
 }
