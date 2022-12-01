@@ -1,11 +1,12 @@
 import React from 'react'
-import DetalhesPropriedades from './src/componentes/detalhesPropriedades'
+import {BotaoNormal, BotaoArrow } from './src/componentes/ThisIsButton'
 
 export default () => {
   return (
     /* Coloque seus componentes abaixo...*/
     <>
-      <DetalhesPropriedades numero={5} />
+      <BotaoNormal />
+      <BotaoArrow />
     </>
   )
 }
