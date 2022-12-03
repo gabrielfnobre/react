@@ -1,12 +1,9 @@
 import React from 'react'
-import { ComUseState, SemUseState } from './src/fundamentos/EstadosNoReact'
+import ComunicacaoIndireta from './src/fundamentos/ComunicacaoIndireta'
 
 export default () => {
   return (
     /* Coloque seus componentes abaixo...*/
-    <>
-      <SemUseState inicial={100} />
-      <ComUseState inicial={100} />
-    </>
+    <ComunicacaoIndireta nome={"Jeová"} letra={"J"} />
   )
 }
