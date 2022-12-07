@@ -1,9 +1,9 @@
 import React from 'react'
-import ThisIsPlataform from './src/componentes/ThisIsPlataform'
+import RenderizacaoCondicionalComTernario from './src/truques-na-manga/RenderizacaoCondicional/RenderizacaoCondicionalComTernario'
 
 export default () => {
   return (
     /* Coloque seus componentes abaixo...*/
-    <ThisIsPlataform /> 
+    <RenderizacaoCondicionalComTernario />
   )
 }
