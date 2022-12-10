@@ -1,9 +1,9 @@
 import React from 'react'
-import ListaComFratList from './src/componentes/Listas/ListaComFratList'
+import ThisIsTextInput from './src/componentes/ThisIsTextInput'
 
 export default () => {
   return (
     /* Coloque seus componentes abaixo...*/
-    <ListaComFratList />
+    <ThisIsTextInput />
   )
 }
