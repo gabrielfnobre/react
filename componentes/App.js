@@ -1,9 +1,9 @@
 import React from 'react'
-import EstiloInline from './src/estilos/EstiloInline'
+import { Flex } from './src/estilos/ThisIsFlexbox'
 
 export default () => {
   return (
     /* Coloque seus componentes abaixo...*/
-    <EstiloInline />
+    <Flex />
   )
 }
