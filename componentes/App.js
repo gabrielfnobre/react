@@ -1,9 +1,10 @@
 import React from 'react'
-import { Flex } from './src/estilos/ThisIsFlexbox'
+import PropsDaClasse from './src/classes/PropsDaClasse'
 
 export default () => {
   return (
     /* Coloque seus componentes abaixo...*/
-    <Flex />
+    //Veja que não muda a forma como passamos parâmetros por através da instância do Componente...
+    <PropsDaClasse numero={7} />
   )
 }
