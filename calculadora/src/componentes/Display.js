@@ -3,13 +3,24 @@ import { StyleSheet, Text, View } from "react-native"
 
 export default (props) => {
 
-    return (
-        <View style={styles.display}>
-            <Text style={styles.displayValue} numberOfLines={1}>
-                {`${props.valorDaTela} | ${props.operador}`}
-            </Text>
-        </View>
-    )
+    //Note que display tem uma lógica, onde, se o houver dois valores armazenados em memória para serem operados a tela vai mostrar os dois valores e a operação. Se não tiver, vai mostrar uma operação só.
+    if(props.segundoValor[1] === 0){
+        return (
+            <View style={styles.display}>
+                <Text style={styles.displayValue} numberOfLines={1}>
+                    {`${props.valorDaTela} ${props.operador}`}
+                </Text>
+            </View>
+        )    
+    } else {
+        return (
+            <View style={styles.display}>
+                <Text style={styles.displayValue} numberOfLines={1}>
+                    {`${props.segundoValor[0]} ${props.operador} ${props.valorDaTela}`}
+                </Text>
+            </View>
+        )
+    }
 }
 
 
