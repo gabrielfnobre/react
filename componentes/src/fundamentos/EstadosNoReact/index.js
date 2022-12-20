@@ -30,7 +30,7 @@ import { Text, Button, StyleSheet, SafeAreaView } from 'react-native'
         0 é igual ao valor passado
         1 é igual ao valor passado depois de ter sido operado por uma callback
 
-        OBS: geralmente essas callbacks recebem o prefixo "set" (setFuncaoAlgumaCoisa)
+        OBS: todas as vezes, essas callbacks devem recebem o prefixo "set" (setFuncaoAlgumaCoisa)
 
     Vamos ver dois exemplos abaixo onde: no 1º tentamos modificar a renderização sem a utilização de um Hook e no segundo usamos o useState para gerar uma modificação na tela.
 
@@ -75,14 +75,15 @@ export function ComUseState(props) {
     //3º a primeira variável é sempre o valor atual
     //4º a segunda variável é uma função que será a única que poderá modificar o valor da primeira variável
     //5º quando o valor da variável 1 é modificado por atravé da função da variável 2 o valor da variável 1 é atualizado, se ele for operado novamente por através da função da variável 2, ele vai ser atualizado de novo, e assim sucessivamente.
+    //OBSERVAÇÕES IMPORTANTES SOBRE AS FUNÇÕES "SET": Essas funções irão designar valores sobre a 1ª variável do useState, mas esses valores jamais deverão ser atribuídos por através do operador de atribuição "=" (sinal de igual), pois as variáveis criadas no 1º índice do useState são variáveis "somente leitura". Isso significa que quando chamamos a função "set" ela automatícamente chama pela 1ª variável deixando ela "aberta" por assim dizer, se colocássemos qualquer valor entre os parênteses da função "set", esse valor seria automaticamente declarado no lugar do valor contido na 1ª variável. Quando queremos adicionar um valor ao valor já existente na 1ª variável, temos que usar um operador de "soma" e assim por diante. Jamais poderíamos operar sobre o valor da 1ª variável como faríamos no caso de uma variável comum que guarda valor no espaço de memória do computador e pode ser acessada por através de atribuíção, autoincremento e etc. 
     const [num, setNumero] = useState(props.inicial)
     
     const inc = () => {
         //Note aqui que nossa função agora recebe a função setNumero que é a única capaz de modificar o valor guardado dentro de um estado.
-        setNumero(num + 1) //Não é possível fazer autoincremento ou decremento
+        setNumero(num + 1) //Não é possível fazer autoincremento ou decremento por ser SOMENTE LEITURA
     }
     const dec = () => {
-        setNumero(num - 1) //Não é possível fazer autoincremento ou decremento
+        setNumero(num - 1) //Não é possível fazer autoincremento ou decremento por ser SOMENTE LEITURA
     }
     
     return (
