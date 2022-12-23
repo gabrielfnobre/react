@@ -5,6 +5,36 @@ import TelaB from "../views/TelaB";
 import TelaC from "../views/TelaC";
 import PassoStack from "../componentes/PassoStack";
 
+/*  STACK:
+
+    Uma das navegações que o React Navigation usa é a navegação em Stack, esse tipo de navegação consiste em fazer com que o aplicativo navegue entre telas como se elas estivessem empilhadas. Mas mais legal é que elas não precisam necessariamente estarem empilhadas de uma determinada forma para que possamos ir para uma determinada tela ou outra. Podemos escolher para que tela queremos navegar.
+                          ________
+                         /       /  -----> Tela 1
+                        /       /___  
+                       /_______/   / -----> Tela 2
+                          /       /___    
+                         /_______/   / 
+                            /       / ------> Tela 3
+                           /_______/
+
+    Para usar o Stack precisamos seguir um passo a passo importante:
+        
+        1º Criação de um Componente que terá um wrapper onde todas as telas serão comportadas;    
+
+        2º Dentro deste componente, teremos que importar a função "createNativeStackNavigator" da biblioteca 
+           "native-stack", conforme podemos checkar mais acima. Para facilitar temos o costume de atribuir essa 
+           função a uma variável entitulada Stack;
+
+        3º Criar um wrapper de navegação usando o componente "Navigator" a partir da variável Stack, é esse 
+           wrapper que irá comportar as telas;
+
+        4º Todos os Componentes deverão ser passados por através de um componente "Screen", esse componente 
+           também é nativo da variável "Stack", os componentes podem ser passados tanto por através de propriedade quanto por através de wrapper. Todas as telas deverão ficar dentro do componente "Screen";
+
+        5º 
+
+*/
+
 const Stack = createNativeStackNavigator()
 
 export default props => {
