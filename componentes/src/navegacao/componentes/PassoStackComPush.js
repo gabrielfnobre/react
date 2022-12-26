@@ -4,6 +4,7 @@ import { View, StyleSheet, Button } from "react-native";
 
 export default props => {
 
+    // Aqui utilizamos as funções para somar um valor ao hook ou retirar o valor
     const avancar = tela => {
         props.navigation.push(tela)
         props.funcoes[0]()

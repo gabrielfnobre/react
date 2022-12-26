@@ -3,6 +3,7 @@ import { View, Text, StyleSheet } from 'react-native';
 
 export default props => {
 
+    // Essa é somente uma tela inicial, onde explicamos a proposta e não vamos ter um botão de voltar...
     return (
         <View style={styles.view}>
             <Text style={styles.text}>Tela Inicial</Text>
