@@ -4,12 +4,18 @@ import { View, StyleSheet, Button } from "react-native";
 
 export default props => {
 
+    //Note que mesmo aqui estamos usando os métodos "navigate" e "goBack" esses métodos são do componente Stack que retirou do método "createNativeStackNavigator", só conseguimos utilizar esses métodos aqui por que eles foram passados via "props" lá no componente Stack. Precisa ser assim para que o React Native entenda que esse componente e as suas Telas estão referenciando ao mesmo menu Stack.
+    
+    //O método navigate indica para que tela devemos ir...
     const avancar = tela => props.navigation.navigate(tela)
+
+    //O método goBack indica que devemos voltar para a tela de onde viemos...
     const voltar = () => props.navigation.goBack()
     
     return (
         <View style={styles.flexInteiro}>
             <View>
+                {/* Note que a função principal desse componente é incluir ou não botões de "avançar" e "voltar" dependendo do que for passado como parâmetro. */}
                 {props.voltar ? <Button title="Voltar" onPress={voltar} /> : false}
                 {props.avancar ? <Button title="Avançar" onPress={() => avancar(props.avancar)} /> : false}
             </View>
