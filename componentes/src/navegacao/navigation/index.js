@@ -2,14 +2,13 @@ import React from "react";
 import { SafeAreaView, StyleSheet } from "react-native";
 //Aqui temos a importação do componente NavigationContainer...
 import { NavigationContainer } from "@react-navigation/native";
-import StackComPush from "./StackComPush";
+import Tab from "./Tab";
 
 export default props => {
     return (
         <SafeAreaView style={styles.safeArea}>
-            {/* Note que o NavigationContainer comporta a nossa Stack... */}
             <NavigationContainer>
-                <StackComPush />
+                <Tab />
             </NavigationContainer>
         </SafeAreaView>
     )
